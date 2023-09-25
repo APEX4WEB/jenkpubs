@@ -4,6 +4,9 @@ pipeline {
             label 'docker-agent-plug'
             }
       }
+    triggers {
+        pollSCN '*/5 * * * *'
+    }
     stages {
         stage('Build') {
             steps {
